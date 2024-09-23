@@ -82,7 +82,7 @@ python manage.py runserver
 Once the application is running, you can access the API at http://localhost:8000/api/
 
 ### API Documentation
-You can find the detailed API documentation in the Postman collection or Swagger collacetion (http://localhost:8000/docs/) provided in this repository.
+You can find the detailed API documentation in the Postman collection(https://github.com/Rajraut7719/social_application_Postman-collection) or Swagger collacetion (http://localhost:8000/docs/) provided in this repository.
 
 
 
