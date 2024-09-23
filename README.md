@@ -47,9 +47,9 @@ python -m venv .venv
 ```bash
 .\.venv\Scripts\activate
 ```
-** On macOS/Linux:**
+**On macOS/Linux:**
 ```bash
-On macOS/Linux:
+source .venv/bin/activate
 ```
 
 ### Step 4: Set up the environment
