@@ -40,12 +40,12 @@ cd social-networking-api
 ### Step 2: Set up the environment
 Create a .env file in the root directory and add the following environment variables:
 
-SECRET_KEY=django-insecure-1mo&tq_y=4r%761^xb-k%3rybb(u*w3uk_jw3n4v10a!ma@44^
-DATABASE_NAME=social_network
-USER_DB_NAME=root
-DB_PASSWORD=root
-DB_HOST_NAME=localhost
-```
+- SECRET_KEY=django-insecure-1mo&tq_y=4r%761^xb-k%3rybb(u*w3uk_jw3n4v10a!ma@44^
+- DATABASE_NAME=social_network
+- USER_DB_NAME=root
+- DB_PASSWORD=root
+- DB_HOST_NAME=localhost
+
 
 
 
