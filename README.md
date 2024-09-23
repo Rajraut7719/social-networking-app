@@ -46,6 +46,10 @@ Create a .env file in the root directory and add the following environment varia
 - DB_PASSWORD=root
 - DB_HOST_NAME=localhost
 
+### Step 3: Install dependencies
+```bash
+pip install -r requirements.txt
+```
 
 
 
