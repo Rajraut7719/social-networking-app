@@ -1,6 +1,6 @@
 # Social Networking API
 
-## Linked Profile - https://www.linkedin.com/in/rajraut
+## Linked In  Profile - https://www.linkedin.com/in/rajraut
 
 ## Overview
 
