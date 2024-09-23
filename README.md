@@ -83,7 +83,7 @@ Once the application is running, you can access the API at http://localhost:8000
 
 ### API Documentation
 You can find the detailed API documentation in the <a href="https://github.com/Rajraut7719/social_application_Postman-collection" target="_blank">Postman collection</a>
- or Swagger collacetion (http://localhost:8000/docs/) provided in this repository.
+ or Swagger collacetion http://localhost:8000/docs/  provided in this repository.
 
 
 
