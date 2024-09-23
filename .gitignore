@@ -1,0 +1,16 @@
+*.pyc
+*.log
+venv
+.idea/*
+.env
+venv/*
+env
+env/*
+celeryworks.txt
+.pytest_cache/*
+note.txt
+.vscode/*
+.env_server
+frontend/*
+static/*
+media/*

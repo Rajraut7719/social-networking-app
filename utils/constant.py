@@ -1,0 +1,8 @@
+
+# Custom response constant
+CUSTOM_RESPONSE_STATUS_CODE = "status_code"
+CUSTOM_RESPONSE_ERROR = "error"
+CUSTOM_RESPONSE_DATA = "data"
+CUSTOM_RESPONSE_MESSAGE = "message"
+CUSTOM_RESPONSE_REQUEST = "Request"
+
