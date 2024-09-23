@@ -50,6 +50,21 @@ Create a .env file in the root directory and add the following environment varia
 ```bash
 pip install -r requirements.txt
 ```
+### Step 4: Migrate the database
+```bash
+python manage.py migrate
+```
+
+### Step 5: Create a superuser (optional)
+```bash
+python manage.py createsuperuser
+```
+
+### Step 6: Start the development server
+```bash
+python manage.py runserver
+```
+Once the application is running, you can access the API at http://localhost:8000/api/
 
 
 
