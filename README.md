@@ -86,5 +86,11 @@ You can find the detailed API documentation in the <a href="https://github.com/R
  or Swagger collacetion http://localhost:8000/docs/  provided in this repository.
 
 
+### Design Choices
+Token-based Authentication: JWT is used for stateless user authentication, providing scalability.
+MySQL: Selected for its reliability and ease of integration with Django.
+Caching with Django: Utilizes Django's caching framework to improve performance by caching frequently accessed data.
+Django's Built-in Features: Utilized Django’s ORM and caching framework for efficient data handling.
+
 
 
