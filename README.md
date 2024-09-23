@@ -37,3 +37,5 @@ The application implements robust security and performance optimization measures
 ```bash
 git clone https://github.com/Rajraut7719/social-networking-application.git
 cd social-networking-api
+
+### Step 2: Set up the environment
