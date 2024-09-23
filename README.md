@@ -37,7 +37,22 @@ The application implements robust security and performance optimization measures
 git clone https://github.com/Rajraut7719/social-networking-application.git
 cd social-networking-api
 ```
-### Step 2: Set up the environment
+### Step 2: Create a virtual environment
+Create a virtual environment in the project directory:
+```bash
+python -m venv .venv
+```
+### Step 3: Activate the virtual environment
+**On Windows:**
+```bash
+.\.venv\Scripts\activate
+```
+** On macOS/Linux:**
+```bash
+On macOS/Linux:
+```
+
+### Step 4: Set up the environment
 Create a .env file in the root directory and add the following environment variables:
 
 - SECRET_KEY=django-insecure-1mo&tq_y=4r%761^xb-k%3rybb(u*w3uk_jw3n4v10a!ma@44^
