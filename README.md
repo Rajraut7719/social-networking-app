@@ -3,8 +3,8 @@
 ## Overview
 
 This project is a scalable, secure, and efficient social networking application built using Django Rest Framework. 
-It provides users with the ability to manage friend requests, search for users, and maintain user activities, 
-all while implementing robust security and performance optimization measures.
+It provides users with the ability to manage friend requests, search for users, and maintain user activities, including notifications for significant events such as friend requests sent and accepted. 
+The application implements robust security and performance optimization measures.
 
 ## Features
 
