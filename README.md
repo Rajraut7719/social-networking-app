@@ -34,8 +34,8 @@ The application implements robust security and performance optimization measures
 
 ### Step 1: Clone the repository
 ```bash
-git clone https://github.com/Rajraut7719/social-networking-application.git
-cd social-networking-api
+git clone https://github.com/Rajraut7719/social-networking-app.git
+cd social-networking-app
 ```
 ### Step 2: Create a virtual environment
 Create a virtual environment in the project directory:
