@@ -1,11 +1,12 @@
 from rest_framework.response import Response
 from rest_framework.pagination import PageNumberPagination
-
 from utils.constant import *
+import time
+import os
+from datetime import date
 
-def custom_response(
-    status, data={}, error=True, message='', is_pagination=False
-):
+
+def custom_response(status, data={}, error=True, message="", is_pagination=False):
     if not is_pagination:
         return Response(
             {
@@ -35,7 +36,7 @@ class CustomPagination(PageNumberPagination):
     """
 
     page_size = 10  # Default page size for pagination
-    page_size_query_param = 'page_size'  # Query parameter name for specifying page size
+    page_size_query_param = "page_size"  # Query parameter name for specifying page size
     max_page_size = 999  # Maximum page size allowed for pagination
 
     def get_paginated_response(self, data):
@@ -92,3 +93,32 @@ def custom_pagination(get_page_size, queryset, request, serializer_class, contex
     # Getting the paginated response
     response = paginator.get_paginated_response(serializer.data)
     return response  # Returning the paginated response
+
+
+def path_and_rename(instance, file_name):
+    """
+    Generates a unique file path and name based on the current date and time.
+
+    Args:
+        instance: The instance of the model to which the file is being attached.
+        file_name (str): The original name of the file.
+
+    Returns:
+        str: The unique file path and name.
+    """
+    # Getting current time in a formatted string
+    todays_time = time.strftime("%y%m%d_%H%M%S")
+    base_name, extension = os.path.splitext(file_name)
+    # Truncating the base name to 20 characters
+    truncated_name = base_name[:20]
+    characters_to_exclude = {WHITE_SPACE, "*", DOT}
+    # Removing certain characters from the truncated name
+    stripped_str = "".join(
+        char for char in truncated_name if char not in characters_to_exclude
+    )
+    # Constructing the new file name with timestamp
+    filename = stripped_str + SINGLE_UNDERSCORE + todays_time + extension
+    # Constructing the final file path with date prefix
+    return FILES_LOCATION_POST_MEDIA + "{}-{}-{}-{}".format(
+        date.today().year, date.today().month, date.today().day, filename
+    )

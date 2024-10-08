@@ -1,0 +1,10 @@
+class PostMessages(object):
+    ERROR_POST_NOT_FOUND = "Post not found."
+    ERROR_POST_POST_UUID_IS_REQUIRED = "Post uuid is required."
+    ERROR_USER_NOT_FOUND = "The requested user was not found."
+    ERROR_MEDIA_REQUIRED = "Media required."
+    ERROR_POST_REQUIRED = "Post id required."
+    SUCCESS_POST_TYPE_UPLOADED = "{} uploaded successfully."
+    SUCCESS_POST_TYPE_UPDATED = "{} updated successfully."
+    SUCCESS_POST_DELETED = "Post deleted successfully."
+    SUCCESS_POST_NOT_INTERESTED = "We have updated your preference successfully."

@@ -55,11 +55,16 @@ source .venv/bin/activate
 ### Step 4: Set up the environment
 Create a .env file in the root directory and add the following environment variables:
 
-- SECRET_KEY=django-insecure-1mo&tq_y=4r%761^xb-k%3rybb(u*w3uk_jw3n4v10a!ma@44^
-- DATABASE_NAME=social_network
-- USER_DB_NAME=root
-- DB_PASSWORD=root
-- DB_HOST_NAME=localhost
+# S3 Bucket settings
+AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = env("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = env("AWS_BUCKET_NAME")
+AWS_S3_CUSTOM_DOMAIN = "%s.s3.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    "CacheControl": "max-age=86400",
+}
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
 
 ### Step 3: Install dependencies
 ```bash
