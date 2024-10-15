@@ -97,22 +97,4 @@ class NotificationListAPI(GenericAPIView):
         return self.serializer_class(notifications, context=context, many=True).data
 
 
-class NotificationReadAPI(GenericAPIView):
-    """
-    API for notification read.
-
-    URL GET : api/notifications-read/
-    {
-        "status_code": 200,
-        "error": false,
-        "data": {},
-        "message": ""
-    }
-    """
-    model = Notification
-
-    def get(self,request):
-        self.model.objects.filter(to_user=request.user,read_at__isnull=True).update(read_at=timezone.now())
-        return custom_response(status.HTTP_200_OK, error=False)
-
 

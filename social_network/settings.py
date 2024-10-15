@@ -90,12 +90,15 @@ WSGI_APPLICATION = "social_network.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
+        "ENGINE": "django.db.backends.postgresql",
         "NAME": env("DATABASE_NAME"),
-        "USER": env("USER_DB_NAME"),
-        "PASSWORD": env("DB_PASSWORD"),
-        "HOST": env("DB_HOST_NAME"),
-        "PORT": 3306,
+        "USER": env("DATABASE_USER"),
+        "PASSWORD": env("DATABASE_PASS"),
+        "HOST": env("DATABASE_HOST"),
+        "PORT": "5432",
+        'OPTIONS': {
+            'options': '-c search_path=social'
+        },
     }
 }
 
@@ -191,23 +194,6 @@ SIMPLE_JWT = {
 # Static files settings
 STATIC_URL = "/" + "static" + "/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
-
-# S3 Bucket settings
-AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = env("AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME = env("AWS_BUCKET_NAME")
-AWS_S3_CUSTOM_DOMAIN = "%s.s3.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
-AWS_S3_OBJECT_PARAMETERS = {
-    "CacheControl": "max-age=86400",
-}
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-
-# Media Files settings
-PUBLIC_MEDIA_LOCATION = "media"
-MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/"
-BUCKET_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/"
 
 # Static and Media Files in S3
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"

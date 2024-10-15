@@ -10,7 +10,7 @@ from apis.friend_request.friend_request_api import (
     PendingRequest,
     UserActivityLogAPI,
 )
-from apis.notification.notification_api import NotificationListAPI, NotificationReadAPI
+from apis.notification.notification_api import NotificationListAPI
 from apis.post_app.post_app_api import AddPostMediaAPI
 
 urlpatterns = [
@@ -23,7 +23,7 @@ urlpatterns = [
     path("user-activities/", UserActivityLogAPI.as_view()),
     # Notification
     path("notifications-list/", NotificationListAPI.as_view()),
-    path("notifications-read/", NotificationReadAPI.as_view()),
+   
     # Post
     path("post/add-media/", AddPostMediaAPI.as_view()),
 ]
