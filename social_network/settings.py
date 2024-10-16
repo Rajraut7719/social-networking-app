@@ -24,11 +24,11 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = "django-insecure-^)243u5*vawx))c165#f-32%82il(!ub-^9(&r#2fe5cyg6t0h"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = env("DEBUG")
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -93,11 +93,11 @@ WSGI_APPLICATION = "social_network.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": env("DB_NAME"),
-        "USER": env("DB_USER"),
-        "PASSWORD": env("DB_PASSWORD"),
-        "HOST": env("DB_HOST"),
-        "PORT": env("DB_PORT"),
+        "NAME": "hypesocial-server",
+        "USER": "rajraut",
+        "PASSWORD": "LWaw0uc$wQf3MY$1",
+        "HOST": "hypesocial-server.postgres.database.azure.com",
+        "PORT": 5432,
     }
 }
 
